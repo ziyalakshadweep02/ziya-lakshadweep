@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owner Login | ZIYA LAKSHADWEEP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; background: #f4f7f6; height: 100vh; display: flex; justify-content: center; align-items: center; margin: 0; }
+        .login-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 100%; max-width: 400px; text-align: center; }
+        .login-card h2 { color: #0077be; text-transform: uppercase; letter-spacing: 1px; }
+        .form-group { text-align: left; margin-bottom: 20px; }
+        label { display: block; font-size: 13px; margin-bottom: 8px; color: #444; font-weight: 600; text-transform: uppercase; }
+        input { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; }
+        button { width: 100%; padding: 14px; background: #0077be; color: white; border: none; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; }
+        .footer-links { margin-top: 25px; font-size: 13px; }
+        .footer-links a { color: #888; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="login-card">
+        <h2>Owner Login</h2>
+        <p>Ziya Lakshadweep Administration</p>
+        <form id="loginForm">
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" id="username" placeholder="admin" required>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" id="password" placeholder="••••••••" required>
+            </div>
+            <button type="submit">ACCESS DASHBOARD</button>
+        </form>
+        <div class="footer-links"><a href="index.html">← Back to Main Website</a></div>
+    </div>
+    <script>
+        <script>
+    document.getElementById('loginForm').onsubmit = function(e) {
+        e.preventDefault();
+        
+        const user = document.getElementById('username').value;
+        const pass = document.getElementById('password').value;
+
+        // Admin Credentials
+        const correctUser = "admin";
+        const correctPass = "Ummabappa123@";
+
+        if(user === correctUser && pass === correctPass) {
+            // Redirects to dashboard directly on success
+            window.location.href = "dashboard.html";
+        } else {
+            // Error message for wrong credentials
+            alert("Access Denied! Invalid credentials.");
+        }
+    };
+</script>

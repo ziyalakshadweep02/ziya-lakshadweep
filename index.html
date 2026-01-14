@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZIYA LAKSHADWEEP | Official Agatti Island Tours</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; color: #2c3e50; scroll-behavior: smooth; background: #f4f9f9; }
+        
+        /* Header Section */
+        header { 
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1500&q=80'); 
+            height: 70vh; background-size: cover; background-position: center; 
+            display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; text-align: center; 
+        }
+        header h1 { font-size: 3rem; margin-bottom: 10px; letter-spacing: 2px; }
+        header p { font-size: 1.2rem; font-weight: 300; }
+
+        /* Navigation */
+        nav { background: #fff; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        nav a { color: #0077be; margin: 0 15px; text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; }
+
+        .container { padding: 40px 20px; max-width: 1100px; margin: auto; }
+
+        /* Welcome Section */
+        .welcome-card { 
+            background: white; padding: 40px; border-radius: 20px; 
+            margin-top: -80px; position: relative; z-index: 10; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; 
+        }
+        .welcome-card h2 { color: #0077be; font-size: 2rem; margin-bottom: 20px; }
+        .welcome-card p { line-height: 1.8; color: #555; font-size: 1.05rem; }
+
+        /* Services Grid */
+        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 30px; }
+        .service-item { background: #eef9ff; padding: 20px; border-radius: 12px; font-weight: 600; color: #005a91; transition: 0.3s; }
+        .service-item:hover { background: #0077be; color: white; transform: translateY(-5px); }
+
+        /* Booking Form */
+        .booking-section { background: #fff; padding: 40px; border-radius: 20px; margin-top: 40px; border: 1px solid #eee; }
+        .form-title { text-align: center; color: #333; margin-bottom: 30px; }
+        .input-group { margin-bottom: 15px; }
+        input, select, textarea { width: 100%; padding: 14px; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; box-sizing: border-box; font-size: 1rem; }
+        
+        .btn-whatsapp { 
+            background: #25D366; color: white; border: none; padding: 18px; 
+            cursor: pointer; border-radius: 8px; font-size: 1.1rem; font-weight: bold; 
+            width: 100%; transition: 0.3s; display: flex; justify-content: center; align-items: center; gap: 10px;
+        }
+        .btn-whatsapp:hover { background: #128c7e; }
+
+        /* Footer */
+        footer { background: #1a1a1a; color: #fff; text-align: center; padding: 50px 20px; margin-top: 60px; }
+        .footer-info { margin-bottom: 20px; font-size: 0.95rem; line-height: 1.8; }
+        
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            .welcome-card { margin-top: -40px; padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>ZIYA LAKSHADWEEP TOURS</h1>
+        <p>Your Local Expert for an Authentic Island Experience</p>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#services">Services</a>
+        <a href="#booking">Enquire</a>
+        <a href="admin.html">Login</a>
+    </nav>
+
+    <div class="container">
+        <div class="welcome-card">
+            <h2>Welcome to Paradise!</h2>
+            <p>
+                Hello! I am <strong>Ziya</strong>, your local expert from Agatti Island. We are excited to help you plan your dream vacation. 
+                With us, you get the most authentic island experience at the best local prices. 
+                Explore the turquoise paradise with those who know it best!
+            </p>
+            
+            <div class="service-grid" id="services">
+                <div class="service-item">✅ Fast Entry Permit</div>
+                <div class="service-item">✅ Island Packages</div>
+                <div class="service-item">✅ Scuba & Water Sports</div>
+                <div class="service-item">✅ Airport Pickup & Drop</div>
+            </div>
+            <p style="margin-top: 20px; font-style: italic; color: #0077be;">
+                Agatti | Bangaram | Thinnakara | Kavaratti
+            </p>
+        </div>
+
+        <div class="booking-section" id="booking">
+            <h2 class="form-title">Get a Customized Quote</h2>
+            <form id="enquiryForm">
+                <div class="input-group">
+                    <input type="text" id="name" placeholder="Full Name" required>
+                </div>
+                <div class="input-group">
+                    <input type="tel" id="phone" placeholder="WhatsApp Number" required>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div class="input-group">
+                        <label style="font-size: 0.8rem; color: #666;">Travel Date</label>
+                        <input type="date" id="date" required>
+                    </div>
+                    <div class="input-group">
+                        <label style="font-size: 0.8rem; color: #666;">Total Persons</label>
+                        <input type="number" id="persons" placeholder="No. of Persons" required>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <textarea id="message" rows="4" placeholder="Duration of Stay / Special Requirements"></textarea>
+                </div>
+                <button type="submit" class="btn-whatsapp">SEND TO WHATSAPP</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
